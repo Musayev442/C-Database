@@ -5,14 +5,22 @@
 struct Employee
 {
     char name[MAX_NAME_LENGTH];
-    char gender[MAX_NAME_LENGTH];
+    char gender;
     int age;
     char job[MAX_JOB_LENGTH];
-    struct Employee *next;
+    struct Employee *next;    
 };
 
-// Function to create a new employee node
-struct Employee *createEmployee(char *name, char *gender, int age, char *job);
 
-// Function to search for an employee based on the given criteria (name, age, gender)
-struct Employee *searchEmployee(struct Employee *head, char *name, int age, char *gender);
+// Function to add a new employee to the database
+void addEmployee(struct Employee **head, char *name, char gender, int age, char *jobDescription);
+
+// Function to modify employee data in the database
+void modifyEmployee(struct Employee *head, char *name, char gender, int age, char *jobDescription);
+
+// Function to delete an employee from the database based on name
+void deleteEmployee(struct Employee **head, char *name, int age, char gender);
+
+// Function to print the details of all employees
+void printEmployees(struct Employee* head);
+
