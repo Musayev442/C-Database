@@ -1,19 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-
-#define MAX_NAME_LENGTH 100
-#define MAX_JOB_LENGTH 100
-
-// Employee structure
-struct Employee
-{
-    char name[MAX_NAME_LENGTH];
-    char gender[MAX_NAME_LENGTH];
-    int age;
-    char job[MAX_JOB_LENGTH];
-    struct Employee *next;
-};
+#include"employee.h"
 
 // Global variable to keep track of the number of employees
 int numEmployees = 0;
